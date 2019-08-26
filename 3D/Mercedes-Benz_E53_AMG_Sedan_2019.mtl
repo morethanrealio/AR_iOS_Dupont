@@ -1,0 +1,377 @@
+# 
+# Wavefront material file
+# Converted by the DEEP Exploration  Deep Exploration 6.1 x64 6.1.2.6638
+# Right Hemisphere, LTD
+# http://www.righthemisphere.com/
+# 
+
+newmtl chrome
+Ka 0.929412 0.929412 0.929412
+Kd 0.929412 0.929412 0.929412
+Ks 0.9 0.9 0.9
+illum 2
+Ns 9.18959
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl d_red
+Ka 0.152941 0.00784314 0.00784314
+Kd 0.152941 0.00784314 0.00784314
+Ks 1 0 0
+illum 2
+Ns 4.92458
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl d_glass
+Ka 0.196078 0.196078 0.196078
+Kd 0.196078 0.196078 0.196078
+Ks 0.9 0.9 0.9
+illum 2
+Ns 16
+d 0.3
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl brakes2
+Ka 0 0 0
+Kd 1 1 1
+Ks 0.5 0.5 0.5
+illum 2
+Ns 64
+map_Kd Brakes_02_DM.png
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl tire_mat4
+Ka 0 0 0
+Kd 1 1 1
+Ks 0.5 0.5 0.5
+illum 2
+Ns 8
+map_Kd Tire_04_DM.png
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl gum
+Ka 0.141176 0.141176 0.141176
+Kd 0.141176 0.141176 0.141176
+Ks 0.9 0.9 0.9
+illum 2
+Ns 4
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl brake_caliper
+Ka 0.678431 0.678431 0.678431
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 6.9644
+map_Kd amg logo.png
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl black_m
+Ka 0.00784314 0.00784314 0.00784314
+Kd 0.00784314 0.00784314 0.00784314
+Ks 0.9 0.9 0.9
+illum 2
+Ns 6.9644
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl red
+Ka 0.603922 0.0470588 0.0470588
+Kd 0.603922 0.0470588 0.0470588
+Ks 0.870588 0.862745 0.823529
+illum 2
+Ns 6.9644
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl body
+Ka 0.262745 0.262745 0.262745
+Kd 0.262745 0.262745 0.262745
+Ks 0.870588 0.862745 0.823529
+illum 2
+Ns 5.27803
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl silver
+Ka 0.678431 0.678431 0.678431
+Kd 0.678431 0.678431 0.678431
+Ks 0.9 0.9 0.9
+illum 2
+Ns 16
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl wheel
+Ka 0.00784314 0.00784314 0.00784314
+Kd 0.00784314 0.00784314 0.00784314
+Ks 0.9 0.9 0.9
+illum 2
+Ns 6.9644
+map_Kd 
+map_bump amg logo.png
+bump amg logo.png
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl black
+Ka 0 0 0
+Kd 0 0 0
+Ks 0.9 0.9 0.9
+illum 2
+Ns 4
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl silver_d
+Ka 0.356863 0.356863 0.356863
+Kd 0.356863 0.356863 0.356863
+Ks 0.9 0.9 0.9
+illum 2
+Ns 16
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl interior
+Ka 0.0509804 0.0509804 0.0509804
+Kd 0.0509804 0.0509804 0.0509804
+Ks 0.9 0.9 0.9
+illum 2
+Ns 4
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl logo
+Ka 0.588235 0.588235 0.588235
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 4
+map_Kd logo.png
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl glass
+Ka 0.882353 0.901961 0.909804
+Kd 0.882353 0.901961 0.909804
+Ks 0.9 0.9 0.9
+illum 2
+Ns 8
+d 0.3
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl plate
+Ka 0.141176 0.141176 0.141176
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 4
+map_Kd plate.png
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl r_glass
+Ka 0.705882 0.0196078 0.0196078
+Kd 0.705882 0.0196078 0.0196078
+Ks 0.9 0.9 0.9
+illum 2
+Ns 8
+d 0.6
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl brakes1
+Ka 0 0 0
+Kd 1 1 1
+Ks 0.5 0.5 0.5
+illum 2
+Ns 64
+map_Kd Brakes_01_DM.png
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl carbon
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+illum 2
+Ns 2.14355
+map_Kd tex_carbon.png
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl leather
+Ka 0 0 0
+Kd 0.378949 0.378949 0.378949
+Ks 0 0 0
+illum 2
+Ns 2.14355
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl dash
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+illum 2
+Ns 2.14355
+map_Kd dash.png
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
