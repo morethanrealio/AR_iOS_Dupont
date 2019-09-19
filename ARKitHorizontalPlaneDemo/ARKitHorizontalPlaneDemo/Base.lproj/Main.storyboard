@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ARKitHorizontalPlaneDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arskView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TbK-Hq-aRT">
+                                <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                            </arskView>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jI8-gS-dO0">
+                                <rect key="frame" x="0.0" y="0.0" width="1194" height="814"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifC-FY-EzG">
+                                <rect key="frame" x="374" y="604" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="FxT-6B-CyY"/>
+                                    <constraint firstAttribute="height" constant="50" id="w6D-xN-4DQ"/>
+                                </constraints>
+                                <state key="normal" image="button">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <action selector="Aumentar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DdG-LX-9hy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUl-dH-iJ3">
+                                <rect key="frame" x="524" y="604" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="IvO-iA-cmd"/>
+                                    <constraint firstAttribute="height" constant="50" id="fjH-zb-Gy8"/>
+                                </constraints>
+                                <state key="normal" image="images"/>
+                                <connections>
+                                    <action selector="segundoMaior:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7km-8C-VOa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQE-Mp-88u">
+                                <rect key="frame" x="824" y="604" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="RZB-Qs-gZX"/>
+                                    <constraint firstAttribute="height" constant="50" id="zdY-4l-Ggl"/>
+                                </constraints>
+                                <state key="normal" image="download"/>
+                                <connections>
+                                    <action selector="segundoMenor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xHF-b8-MnF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxB-cc-AFm">
+                                <rect key="frame" x="674" y="604" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="5uf-V1-E6s"/>
+                                    <constraint firstAttribute="height" constant="50" id="tLh-ku-VxD"/>
+                                </constraints>
+                                <state key="normal" image="amarelo"/>
+                                <connections>
+                                    <action selector="Medio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RIO-HN-lLu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfm-ib-45A">
+                                <rect key="frame" x="974" y="604" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0oz-Dh-xqM"/>
+                                    <constraint firstAttribute="width" constant="50" id="KwN-70-Xko"/>
+                                </constraints>
+                                <state key="normal" image="button">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <action selector="Diminuir:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XYM-Yh-jGc"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ativo 5" translatesAutoresizingMaskIntoConstraints="NO" id="SXe-md-sdl">
+                                <rect key="frame" x="20" y="20" width="480" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="L8A-bL-DhO"/>
+                                    <constraint firstAttribute="width" constant="480" id="r6a-Nw-Jqj"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ativo 6" translatesAutoresizingMaskIntoConstraints="NO" id="H2E-S4-7Vo">
+                                <rect key="frame" x="112" y="50" width="144" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="HPK-Vm-69x"/>
+                                    <constraint firstAttribute="height" constant="86" id="ScE-dk-Foi"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNh-b0-PxT">
+                                <rect key="frame" x="942" y="197" width="187" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187" id="Ca2-c6-BEe"/>
+                                    <constraint firstAttribute="height" constant="47" id="ti1-v2-Qn3"/>
+                                </constraints>
+                                <state key="normal" image="Ativo 3"/>
+                                <connections>
+                                    <action selector="adicionarDiamond:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bCP-3z-3YQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBV-z7-uyL">
+                                <rect key="frame" x="942" y="137" width="101" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Cmc-hu-bCH"/>
+                                    <constraint firstAttribute="width" constant="101" id="VDG-51-mLc"/>
+                                </constraints>
+                                <state key="normal" image="Ativo 2"/>
+                                <connections>
+                                    <action selector="adicionarRUBI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WOM-mC-IDG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wki-Fe-1V8">
+                                <rect key="frame" x="942" y="76" width="187" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187" id="2jk-11-BJF"/>
+                                    <constraint firstAttribute="height" constant="47" id="ine-hu-q75"/>
+                                </constraints>
+                                <state key="normal" image="Ativo 1"/>
+                                <connections>
+                                    <action selector="adicionarSTD:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dOK-hY-RR0"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ativo 8" translatesAutoresizingMaskIntoConstraints="NO" id="Tlc-hP-0KG">
+                                <rect key="frame" x="943" y="87" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="I4A-fb-qN1"/>
+                                    <constraint firstAttribute="width" constant="24" id="cZr-je-HPJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ativo 8" translatesAutoresizingMaskIntoConstraints="NO" id="2yx-me-9k1">
+                                <rect key="frame" x="943" y="148" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="obw-hY-sJN"/>
+                                    <constraint firstAttribute="height" constant="24" id="wVI-LN-W3l"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ativo 8" translatesAutoresizingMaskIntoConstraints="NO" id="eOK-ou-hoR">
+                                <rect key="frame" x="943" y="207" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="mF5-A4-igS"/>
+                                    <constraint firstAttribute="height" constant="24" id="suM-xR-2tJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ativo 4" translatesAutoresizingMaskIntoConstraints="NO" id="fdn-2G-CC2">
+                                <rect key="frame" x="612" y="20" width="582" height="327"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="582" id="UJx-ve-kYl"/>
+                                    <constraint firstAttribute="height" constant="327" id="tW3-lv-l2L"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0p1-KR-fx7">
+                                <rect key="frame" x="150" y="50" width="400" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Ube-gH-nlJ"/>
+                                    <constraint firstAttribute="width" constant="400" id="u3U-E0-Web"/>
+                                </constraints>
+                                <state key="normal" image="Ativo 1-1">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                                <connections>
+                                    <action selector="habilitarTiro:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vM8-K1-eVL"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ativo 8" translatesAutoresizingMaskIntoConstraints="NO" id="7lV-Pe-F38">
+                                <rect key="frame" x="525" y="66" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="7KM-L0-gW3"/>
+                                    <constraint firstAttribute="height" constant="24" id="kD7-cK-Qbn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jI8-gS-dO0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3bt-6u-0df"/>
+                            <constraint firstItem="0p1-KR-fx7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="3tI-dx-Ge4"/>
+                            <constraint firstItem="FUl-dH-iJ3" firstAttribute="leading" secondItem="ifC-FY-EzG" secondAttribute="trailing" constant="100" id="7Yd-lS-I7p"/>
+                            <constraint firstItem="TbK-Hq-aRT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8If-4Y-r37"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ifC-FY-EzG" secondAttribute="bottom" constant="160" id="8zS-09-nfl"/>
+                            <constraint firstItem="fdn-2G-CC2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9na-Cq-ivV"/>
+                            <constraint firstItem="FBV-z7-uyL" firstAttribute="leading" secondItem="Wki-Fe-1V8" secondAttribute="leading" id="C1w-OS-3Md"/>
+                            <constraint firstItem="jI8-gS-dO0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="E3G-wp-SQF"/>
+                            <constraint firstItem="eOK-ou-hoR" firstAttribute="top" secondItem="FBV-z7-uyL" secondAttribute="bottom" constant="23" id="FmY-Kg-py1"/>
+                            <constraint firstItem="FBV-z7-uyL" firstAttribute="top" secondItem="Wki-Fe-1V8" secondAttribute="bottom" constant="14" id="FnL-d5-rDg"/>
+                            <constraint firstItem="7lV-Pe-F38" firstAttribute="leading" secondItem="SXe-md-sdl" secondAttribute="trailing" constant="25" id="M7s-SG-23i"/>
+                            <constraint firstItem="VNh-b0-PxT" firstAttribute="leading" secondItem="Wki-Fe-1V8" secondAttribute="leading" id="MjK-6q-14i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wki-Fe-1V8" secondAttribute="trailing" constant="65" id="QCf-HA-DmS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IxB-cc-AFm" secondAttribute="bottom" constant="160" id="QYN-EQ-RlD"/>
+                            <constraint firstItem="TbK-Hq-aRT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="R0h-lq-gTx"/>
+                            <constraint firstAttribute="bottom" secondItem="TbK-Hq-aRT" secondAttribute="bottom" id="RjF-xm-mMy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eOK-ou-hoR" secondAttribute="trailing" constant="227" id="V7E-EN-aFb"/>
+                            <constraint firstItem="IxB-cc-AFm" firstAttribute="leading" secondItem="FUl-dH-iJ3" secondAttribute="trailing" constant="100" id="Vbv-hy-dZi"/>
+                            <constraint firstItem="jI8-gS-dO0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WGu-dg-1D5"/>
+                            <constraint firstItem="sQE-Mp-88u" firstAttribute="leading" secondItem="IxB-cc-AFm" secondAttribute="trailing" constant="100" id="Y9Z-Oy-lho"/>
+                            <constraint firstItem="SXe-md-sdl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="dAr-kC-XOK"/>
+                            <constraint firstItem="Tlc-hP-0KG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="87" id="dLW-xV-dfR"/>
+                            <constraint firstItem="VNh-b0-PxT" firstAttribute="top" secondItem="FBV-z7-uyL" secondAttribute="bottom" constant="13" id="dff-Aa-KBm"/>
+                            <constraint firstItem="SXe-md-sdl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fBY-9L-0Le"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tlc-hP-0KG" secondAttribute="trailing" constant="227" id="fJK-yD-i1p"/>
+                            <constraint firstItem="TbK-Hq-aRT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g03-kt-Lrq"/>
+                            <constraint firstItem="sfm-ib-45A" firstAttribute="leading" secondItem="sQE-Mp-88u" secondAttribute="trailing" constant="100" id="gsb-cy-8jT"/>
+                            <constraint firstItem="Wki-Fe-1V8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="76" id="iQZ-bE-WMq"/>
+                            <constraint firstItem="H2E-S4-7Vo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="112" id="klu-GI-cyS"/>
+                            <constraint firstItem="H2E-S4-7Vo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="ko1-Zh-ahr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2yx-me-9k1" secondAttribute="trailing" constant="227" id="mIe-HJ-0y8"/>
+                            <constraint firstItem="fdn-2G-CC2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="naa-yp-V2u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sfm-ib-45A" secondAttribute="trailing" constant="170" id="pRi-oC-E0b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FUl-dH-iJ3" secondAttribute="bottom" constant="160" id="qVe-ET-DSb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sfm-ib-45A" secondAttribute="bottom" constant="160" id="suf-OV-ePf"/>
+                            <constraint firstItem="0p1-KR-fx7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="tpR-34-TCJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sQE-Mp-88u" secondAttribute="bottom" constant="160" id="v0n-dl-h5M"/>
+                            <constraint firstItem="7lV-Pe-F38" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="wSb-TK-gzh"/>
+                            <constraint firstItem="2yx-me-9k1" firstAttribute="top" secondItem="Wki-Fe-1V8" secondAttribute="bottom" constant="25" id="wY8-iH-6AW"/>
+                            <constraint firstItem="jI8-gS-dO0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wZL-uq-saG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ivDiamond" destination="eOK-ou-hoR" id="INa-Fc-Yg8"/>
+                        <outlet property="ivKevXp" destination="7lV-Pe-F38" id="EyX-eg-clh"/>
+                        <outlet property="ivRUBI" destination="2yx-me-9k1" id="WWc-9l-pgZ"/>
+                        <outlet property="ivSTD" destination="Tlc-hP-0KG" id="aV1-EA-SK5"/>
+                        <outlet property="sceneView" destination="jI8-gS-dO0" id="oTc-r2-wcA"/>
+                        <outlet property="spriteView" destination="TbK-Hq-aRT" id="s2k-7H-gBL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.68341708542712" y="133.09352517985613"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Ativo 1" width="512" height="99"/>
+        <image name="Ativo 1-1" width="512" height="51"/>
+        <image name="Ativo 2" width="512" height="189"/>
+        <image name="Ativo 3" width="512" height="105"/>
+        <image name="Ativo 4" width="810" height="512"/>
+        <image name="Ativo 5" width="369" height="512"/>
+        <image name="Ativo 6" width="1195" height="512"/>
+        <image name="Ativo 8" width="512" height="512"/>
+        <image name="amarelo" width="225" height="225"/>
+        <image name="button" width="225" height="225"/>
+        <image name="download" width="225" height="225"/>
+        <image name="images" width="225" height="225"/>
+    </resources>
+</document>
