@@ -184,6 +184,7 @@ class ViewController: UIViewController  {
             let plano = SCNNode.init(geometry: SCNPlane(width: 0.2, height: 0.2))
             plano.position = posicao
             plano.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "logo.png")
+            plano.geometry?.firstMaterial?.isDoubleSided = true
             result.node.addChildNode(plano)
             
             print("acertou: \(result.node.name)")
