@@ -162,6 +162,7 @@ class ViewController: UIViewController  {
         // adiciona um tap Recognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         sceneView.addGestureRecognizer(tapGesture)
+        tapGesture.delegate = self
         
         
     }
@@ -172,6 +173,7 @@ class ViewController: UIViewController  {
         
         // check what nodes are tapped
         let p = gestureRecognize.location(in: sceneView)
+        
         let hitResults = sceneView.hitTest(p, options: [:])
         // check that we clicked on at least one object
         if hitResults.count > 0 {
@@ -206,11 +208,6 @@ class ViewController: UIViewController  {
             let carNode = shipScene.rootNode.childNode(withName: "car", recursively: false),
             let sphereNode = shipScene.rootNode.childNode(withName: "sphere", recursively: false),
             let blindagemNode = shipScene.rootNode.childNode(withName: "Placas_02", recursively: false)
-            //let rodaD_ENode = shipScene.rootNode.childNode(withName: "rodaD_E", recursively: false),
-            //let rodaD_DNode = shipScene.rootNode.childNode(withName: "rodaD_D", recursively: false),
-            //let rodaT_ENode = shipScene.rootNode.childNode(withName: "rodaT_E", recursively: false),
-            //let rodaT_DNode = shipScene.rootNode.childNode(withName: "rodaT_D", recursively: false)
-            //let shadowNode = shipScene.rootNode.childNode(withName: "sombra", recursively: false)
         else {
             print("not found")
             return
@@ -223,18 +220,11 @@ class ViewController: UIViewController  {
         
         
         carNode.position = SCNVector3(x + 2.0,y,z)
-        //carNode.opacity = 0.8
         sceneView.scene.rootNode.addChildNode(carNode)
         let rodaD_ENode = carNode.childNode(withName: "rodaD_E", recursively: false)
         let rodaD_DNode = carNode.childNode(withName: "rodaD_D", recursively: false)
         let rodaT_ENode = carNode.childNode(withName: "rodaT_E", recursively: false)
         let rodaT_DNode = carNode.childNode(withName: "rodaT_D", recursively: false)
-        
-        /*rodaD_ENode?.position = SCNVector3(x + 4.709, y + 0.047, z + 5.262)
-        rodaD_DNode?.position = SCNVector3(x + 1.585, y + 0.05, z + 317.803)
-        rodaT_ENode?.position = SCNVector3(x + 1.758, y + 0.002, z - 4.028)
-        rodaT_DNode?.position = SCNVector3(x + 1.188, y + 0.006, z - 263.439)*/
-        
         
         carro = carNode
         SCNTransaction.begin()
@@ -242,15 +232,6 @@ class ViewController: UIViewController  {
         carNode.position.x -= 2.0
         
         SCNTransaction.commit()
-        
-        /*rodaD_ENode?.pivot = SCNMatrix4MakeTranslation(77.753, 33.463, 163.473)
-        rodaD_DNode?.pivot = SCNMatrix4MakeTranslation(78.042, 35.432, 317.803)
-        rodaT_ENode?.pivot = SCNMatrix4MakeTranslation(81.565, 37.466, -132.166)
-        rodaT_DNode?.pivot = SCNMatrix4MakeTranslation(81.457, 34.604, -133.528)*/
-        
-        //rodaT_ENode.position = SCNVector3(x + 2.066,y + 0.017,z + 0.04)
-        //sceneView.scene.rootNode.addChildNode(rodaT_ENode)
-        //rodat_e? = rodaT_ENode
         
         let animation = CABasicAnimation(keyPath: "transform.eulerAngles.x")
         animation.toValue = NSNumber(value: Double.pi*2.0)
@@ -260,28 +241,9 @@ class ViewController: UIViewController  {
         animation.repeatDuration = tempo
         rodaT_ENode?.addAnimation(animation, forKey: "roda")
         
-        /*SCNTransaction.begin()
-        SCNTransaction.animationDuration = 2.0
-        rodaT_ENode.position.x -= 2.0
-        SCNTransaction.commit()*/
         
-        //rodaD_ENode.position = SCNVector3(x + 1.919,y + 0.017,z + 0.04)
-        //rodaD_ENode.eulerAngles.y = -Float.pi/2
-        //sceneView.scene.rootNode.addChildNode(rodaD_ENode)
-        //rodad_e? = rodaD_ENode
-        
-
         rodaD_ENode?.addAnimation(animation, forKey: "roda")
-        
-        /*SCNTransaction.begin()
-        SCNTransaction.animationDuration = 2.0
-        rodaD_ENode.position.x -= 2.0
-        SCNTransaction.commit()*/
-        
-        //rodaD_DNode.position = SCNVector3(x + 1.919,y + 0.017,z - 0.04)
-        //rodaD_DNode.eulerAngles.y = Float.pi/2
-        //sceneView.scene.rootNode.addChildNode(rodaD_DNode)
-        //rodad_d? = rodaD_DNode
+    
         
         let animation2 = CABasicAnimation(keyPath: "transform.eulerAngles.x")
         animation2.toValue = NSNumber(value: -Double.pi*2.0)
@@ -292,36 +254,41 @@ class ViewController: UIViewController  {
         rodaD_DNode?.addAnimation(animation2, forKey: "roda2")
         
         
-        /*SCNTransaction.begin()
-        SCNTransaction.animationDuration = 2.0
-        rodaD_DNode.position.x -= 2.0
-        SCNTransaction.commit()*/
-        
-        //rodaT_DNode.position = SCNVector3(x + 2.066,y + 0.017,z - 0.04)
-        //ceneView.scene.rootNode.addChildNode(rodaT_DNode)
-        //rodat_d? = rodaT_DNode
-        
         rodaT_DNode?.addAnimation(animation2, forKey: "roda2")
         
-        
-        /*SCNTransaction.begin()
-        SCNTransaction.animationDuration = 2.0
-        rodaT_DNode.position.x -= 2.0
-        SCNTransaction.commit()*/
-        
-        
-        //carNode.position = SCNVector3(x,y,z)
         
         sphereNode.position = SCNVector3(x + 0.2, y + 0.01, z + 0.1)
         sceneView.scene.rootNode.addChildNode(sphereNode)
         
         tapReconizer?.isEnabled = false
         
+        let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
+        sceneView.addGestureRecognizer(swipeRecognizer)
+        swipeRecognizer.delegate = self
+        
+        let pinchRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handlePinch(_:)))
+        sceneView.addGestureRecognizer(pinchRecognizer)
+        pinchRecognizer.delegate = self
+        
     }
+    
+    @objc
+       func handleSwipe(_ gestureRecognize: UIGestureRecognizer) {
+        
+    }
+    
+    @objc
+       func handlePinch(_ gestureRecognize: UIGestureRecognizer) {
+        
+        
+        
+    }
+    
     
     //Quando o usuario toca na tela chama a funcao de colocar carro
     func addTapGestureToSceneView(){
             let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.addShipToSceneView(withGestureRecognizer:)))
+            tapGestureRecognizer.delegate = self
             sceneView.addGestureRecognizer(tapGestureRecognizer)
           tapReconizer = tapGestureRecognizer
     }
@@ -401,6 +368,13 @@ extension ViewController: ARSCNViewDelegate{
         planeNode.position = SCNVector3(x, y, z)
     }
     
+}
+
+extension ViewController: UIGestureRecognizerDelegate{
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
 }
 
 extension float4x4 {
