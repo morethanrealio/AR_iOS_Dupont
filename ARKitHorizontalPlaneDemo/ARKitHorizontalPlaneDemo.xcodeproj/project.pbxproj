@@ -12,8 +12,6 @@
 		638A9CF31FBA0605001D52ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638A9CF11FBA0605001D52ED /* Main.storyboard */; };
 		638A9CF51FBA0605001D52ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638A9CF41FBA0605001D52ED /* Assets.xcassets */; };
 		638A9CF81FBA0605001D52ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638A9CF61FBA0605001D52ED /* LaunchScreen.storyboard */; };
-		638A9D021FBA065D001D52ED /* ship.scn in Resources */ = {isa = PBXBuildFile; fileRef = 638A9D001FBA065D001D52ED /* ship.scn */; };
-		638A9D031FBA065D001D52ED /* ship.png in Resources */ = {isa = PBXBuildFile; fileRef = 638A9D011FBA065D001D52ED /* ship.png */; };
 		EFB53B4A233559C5007C8F17 /* amg logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFB53B49233559C5007C8F17 /* amg logo.jpg */; };
 		EFB53B4C23355A98007C8F17 /* dash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFB53B4B23355A98007C8F17 /* dash.jpg */; };
 		EFB53B4E23355AAA007C8F17 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFB53B4D23355AAA007C8F17 /* logo.jpg */; };
@@ -37,8 +35,6 @@
 		638A9CF41FBA0605001D52ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		638A9CF71FBA0605001D52ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		638A9CF91FBA0605001D52ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		638A9D001FBA065D001D52ED /* ship.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ship.scn; sourceTree = "<group>"; };
-		638A9D011FBA065D001D52ED /* ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship.png; sourceTree = "<group>"; };
 		EFB53B49233559C5007C8F17 /* amg logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "amg logo.jpg"; path = "../../../3D/amg logo.jpg"; sourceTree = "<group>"; };
 		EFB53B4B23355A98007C8F17 /* dash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = dash.jpg; path = ../../../3D/dash.jpg; sourceTree = "<group>"; };
 		EFB53B4D23355AAA007C8F17 /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logo.jpg; path = ../../../3D/logo.jpg; sourceTree = "<group>"; };
@@ -110,8 +106,6 @@
 				EFB53B5323355AE6007C8F17 /* Tire_04_DM.jpg */,
 				EFB53B5523355AE6007C8F17 /* Tire_04_NM.jpg */,
 				EFB53B4B23355A98007C8F17 /* dash.jpg */,
-				638A9D011FBA065D001D52ED /* ship.png */,
-				638A9D001FBA065D001D52ED /* ship.scn */,
 				EFD4D5B92333BED000F06B7B /* Mercedes_002.scn */,
 			);
 			path = "3D Objects";
@@ -182,7 +176,6 @@
 				638A9CF81FBA0605001D52ED /* LaunchScreen.storyboard in Resources */,
 				EFD4D5BA2333BED000F06B7B /* Mercedes_002.scn in Resources */,
 				EFB53B6023355B46007C8F17 /* sombra.png in Resources */,
-				638A9D031FBA065D001D52ED /* ship.png in Resources */,
 				638A9CF51FBA0605001D52ED /* Assets.xcassets in Resources */,
 				EFB53B5823355AE6007C8F17 /* plate.jpg in Resources */,
 				EFB53B5B23355AE6007C8F17 /* Brakes_01_DM.jpg in Resources */,
@@ -190,7 +183,6 @@
 				EFB53B5E23355AE6007C8F17 /* Brakes_02_NM.jpg in Resources */,
 				EFB53B5C23355AE6007C8F17 /* Tire_04_NM.jpg in Resources */,
 				EFB53B4A233559C5007C8F17 /* amg logo.jpg in Resources */,
-				638A9D021FBA065D001D52ED /* ship.scn in Resources */,
 				EFB53B5A23355AE6007C8F17 /* Tire_04_DM.jpg in Resources */,
 				638A9CF31FBA0605001D52ED /* Main.storyboard in Resources */,
 				EFB53B4C23355A98007C8F17 /* dash.jpg in Resources */,

@@ -14,7 +14,7 @@ import ARKit
 class ViewController: UIViewController  {
     
     @IBOutlet weak var sceneView: ARSCNView!
-    @IBOutlet weak var spriteView: ARSKView!
+//    @IBOutlet weak var spriteView: ARSKView!
     var carro:SCNNode?
     var blindagem:SCNNode?
     var tapReconizer: UITapGestureRecognizer?
@@ -29,7 +29,6 @@ class ViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment to configure lighting
-        configureLighting()
         addTapGestureToSceneView()
         ivSTD.alpha = 0.0
         ivRUBI.alpha = 0.0
@@ -47,20 +46,47 @@ class ViewController: UIViewController  {
         sceneView.session.pause()
     }
     
+    func changeCarSize(vec: SCNVector3 ) {
+        print(vec)
+        if carro != nil {
+            let tamanhodoCarro = vec
+            let ofset = SCNVector3(vec.x + 0.00001, vec.y + 0.00001, vec.z + 0.00001)
+            carro?.scale = tamanhodoCarro
+            blindagem?.scale = ofset
+        }
+    }
     
     // botoes de resize
     // primeiro botao
-    @IBAction func Aumentar(_ sender: Any) {
-        if carro != nil {
-           let tamanhodoCarro = SCNVector3(0.008,0.008,0.008)
-            let ofset = SCNVector3(0.00801,0.00801,0.00801)
-            carro?.scale = tamanhodoCarro
-            blindagem?.scale = ofset
-            //sombra?.scale = tamanhodoCarro
-            }
+    @IBAction func Aumentar(_ sender: UIButton) {
+        
+        switch sender.tag {
+        case 0:
+            changeCarSize(vec: SCNVector3(0.008, 0.008, 0.008))
+        case 1:
+            changeCarSize(vec: SCNVector3(0.006, 0.006, 0.006))
+        case 2:
+            changeCarSize(vec: SCNVector3(0.003, 0.003, 0.003))
+        case 3:
+            changeCarSize(vec: SCNVector3(0.001, 0.001, 0.001))
+        case 4:
+            changeCarSize(vec: SCNVector3(0.0005, 0.0005, 0.0005))
+        default:
+            changeCarSize(vec: SCNVector3(0.008, 0.008, 0.008))
+        }
+        
+//        if carro != nil {
+//           let tamanhodoCarro = SCNVector3(0.008,0.008,0.008)
+//            let ofset = SCNVector3(0.00801,0.00801,0.00801)
+//            carro?.scale = tamanhodoCarro
+//            blindagem?.scale = ofset
+//            //sombra?.scale = tamanhodoCarro
+//            }
 
     }
-    
+    /*
+     
+     
     //segundo botao
     @IBAction func segundoMaior(_ sender: Any) {
         if carro != nil {
@@ -108,6 +134,7 @@ class ViewController: UIViewController  {
         }
     }
     //fim do resize
+ */
     
     // botoes da blindagem
     
@@ -204,23 +231,22 @@ class ViewController: UIViewController  {
         let y = translation.y
         let z = translation.z
         
-        guard let shipScene = SCNScene(named: "Mercedes_002.scn"),
-            let carNode = shipScene.rootNode.childNode(withName: "car", recursively: false),
-            let sphereNode = shipScene.rootNode.childNode(withName: "sphere", recursively: false),
-            let blindagemNode = shipScene.rootNode.childNode(withName: "Placas_02", recursively: false)
+        guard let carScene = SCNScene(named: "Mercedes_002.scn"),
+            let carNode = carScene.rootNode.childNode(withName: "car", recursively: false),
+            let blindagemNode = carScene.rootNode.childNode(withName: "Placas_02", recursively: false)
         else {
             print("not found")
             return
         }
         
         blindagemNode.position = SCNVector3(x,y,z)
-        sceneView.scene.rootNode.addChildNode(blindagemNode)
         blindagemNode.opacity = 0.0
         blindagem = blindagemNode
-        
-        
+        sceneView.scene.rootNode.addChildNode(blindagemNode)
+       
         carNode.position = SCNVector3(x + 2.0,y,z)
         sceneView.scene.rootNode.addChildNode(carNode)
+        
         let rodaD_ENode = carNode.childNode(withName: "rodaD_E", recursively: false)
         let rodaD_DNode = carNode.childNode(withName: "rodaD_D", recursively: false)
         let rodaT_ENode = carNode.childNode(withName: "rodaT_E", recursively: false)
@@ -230,35 +256,23 @@ class ViewController: UIViewController  {
         SCNTransaction.begin()
         SCNTransaction.animationDuration = tempo
         carNode.position.x -= 2.0
-        
         SCNTransaction.commit()
         
         let animation = CABasicAnimation(keyPath: "transform.eulerAngles.x")
         animation.toValue = NSNumber(value: Double.pi*2.0)
         animation.duration = 1.0
         animation.autoreverses = false
-        //animation.repeatCount = .infinity
         animation.repeatDuration = tempo
         rodaT_ENode?.addAnimation(animation, forKey: "roda")
-        
-        
         rodaD_ENode?.addAnimation(animation, forKey: "roda")
     
-        
         let animation2 = CABasicAnimation(keyPath: "transform.eulerAngles.x")
         animation2.toValue = NSNumber(value: -Double.pi*2.0)
         animation2.duration = 1.0
         animation2.autoreverses = false
-        //animation2.repeatCount = .infinity
         animation2.repeatDuration = tempo
         rodaD_DNode?.addAnimation(animation2, forKey: "roda2")
-        
-        
         rodaT_DNode?.addAnimation(animation2, forKey: "roda2")
-        
-        
-        sphereNode.position = SCNVector3(x + 0.2, y + 0.01, z + 0.1)
-        sceneView.scene.rootNode.addChildNode(sphereNode)
         
         tapReconizer?.isEnabled = false
         
@@ -307,14 +321,13 @@ class ViewController: UIViewController  {
         //ferramestas para debugar
         sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         sceneView.showsStatistics = true
-    }
-    
-    // Configuracao de iluminacao da cena AR
-    func configureLighting() {
+        
+        // light config
         sceneView.autoenablesDefaultLighting = true
         sceneView.automaticallyUpdatesLighting = true
     }
     
+
 }
 
 // extencao Delegate da ViewController
