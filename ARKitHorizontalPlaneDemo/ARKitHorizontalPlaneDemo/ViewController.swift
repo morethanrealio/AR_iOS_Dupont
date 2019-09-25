@@ -18,10 +18,12 @@ class ViewController: UIViewController  {
     var carro:SCNNode?
     var blindagem:SCNNode?
     var tapReconizer: UITapGestureRecognizer?
+    var currentAngleY: Float = -90.0
     let tempo = 2.0
     @IBOutlet weak var ivSTD: UIImageView!
     @IBOutlet weak var ivRUBI: UIImageView!
     @IBOutlet weak var ivDiamond: UIImageView!
+    @IBOutlet weak var ivInformacao: UIImageView!
     @IBOutlet weak var ivKevXp: UIImageView!
     
     //var sombra:SCNNode?
@@ -34,6 +36,7 @@ class ViewController: UIViewController  {
         ivRUBI.alpha = 0.0
         ivDiamond.alpha = 0.0
         ivKevXp.alpha = 0.0
+        ivInformacao.alpha = 0.0
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,7 +53,7 @@ class ViewController: UIViewController  {
         print(vec)
         if carro != nil {
             let tamanhodoCarro = vec
-            let ofset = SCNVector3(vec.x + 0.00001, vec.y + 0.00001, vec.z + 0.00001)
+            let ofset = SCNVector3(vec.x - 0.00001, vec.y - 0.00001, vec.z - 0.00001)
             carro?.scale = tamanhodoCarro
             blindagem?.scale = ofset
         }
@@ -74,104 +77,50 @@ class ViewController: UIViewController  {
         default:
             changeCarSize(vec: SCNVector3(0.008, 0.008, 0.008))
         }
-        
-//        if carro != nil {
-//           let tamanhodoCarro = SCNVector3(0.008,0.008,0.008)
-//            let ofset = SCNVector3(0.00801,0.00801,0.00801)
-//            carro?.scale = tamanhodoCarro
-//            blindagem?.scale = ofset
-//            //sombra?.scale = tamanhodoCarro
-//            }
-
     }
-    /*
-     
-     
-    //segundo botao
-    @IBAction func segundoMaior(_ sender: Any) {
-        if carro != nil {
-           let tamanhodoCarro = SCNVector3(0.006,0.006,0.006)
-            let ofset = SCNVector3(0.00601,0.00601,0.00601)
-            carro?.scale = tamanhodoCarro
-            blindagem?.scale = ofset
-            //sombra?.scale = tamanhodoCarro
-        }
-    }
-    
-    
-    // terceiro botao
-    @IBAction func Medio(_ sender: Any) {
-        if carro != nil {
-           let tamanhodoCarro = SCNVector3(0.003,0.003,0.003)
-            let ofset = SCNVector3(0.00301,0.00301,0.00301)
-            carro?.scale = tamanhodoCarro
-            blindagem?.scale = ofset
-            //sombra?.scale = tamanhodoCarro
-        }
-        
-    }
-    
-    // quarto botao
-    @IBAction func segundoMenor(_ sender: Any) {
-        if carro != nil {
-           let tamanhodoCarro = SCNVector3(0.001,0.001,0.001)
-            let ofset = SCNVector3(0.00101,0.00101,0.00101)
-            carro?.scale = tamanhodoCarro
-            blindagem?.scale = ofset
-            //sombra?.scale = tamanhodoCarro
-        }
-    }
-    
-    
-    // quinto botao
-    @IBAction func Diminuir(_ sender: Any) {
-                if carro != nil {
-           let tamanhodoCarro = SCNVector3(0.0005,0.0005,0.0005)
-           let ofset = SCNVector3(0.00051,0.00051,0.00051)
-            carro?.scale = tamanhodoCarro
-            blindagem?.scale = ofset
-            //sombra?.scale = tamanhodoCarro
-        }
-    }
-    //fim do resize
- */
+    // fim do resize
     
     // botoes da blindagem
     
-    @IBAction func adicionarSTD(_ sender: Any) {
-        if carro != nil {
+        func modificarBlindagem(identificador: Int){
             
-            ivSTD.alpha = 1.0
-            ivRUBI.alpha = 0.0
-            ivDiamond.alpha = 0.0
-            carro?.opacity = 0.7
+            ivInformacao.alpha = 1.0
+            carro?.opacity = 0.75
             blindagem?.opacity = 1.0
-            blindagem?.geometry?.material(named: "placa")?.diffuse.contents = UIColor.yellow
-            blindagem?.geometry?.material(named: "PlacaColuna")?.diffuse.contents = UIColor.orange
-        }
-    }
-    
-    @IBAction func adicionarRUBI(_ sender: Any) {
-        if carro != nil {
-            ivRUBI.alpha = 1.0
+            
+            switch identificador {
+            case 0:
+                ivSTD.alpha = 1.0
+                ivRUBI.alpha = 0.0
+                ivDiamond.alpha = 0.0
+                blindagem?.geometry?.material(named: "placa")?.diffuse.contents = UIColor.yellow
+                blindagem?.geometry?.material(named: "PlacaColuna")?.diffuse.contents = UIColor.orange
+            case 1:
             ivSTD.alpha = 0.0
+            ivRUBI.alpha = 1.0
             ivDiamond.alpha = 0.0
-            carro?.opacity = 0.7
-            blindagem?.opacity = 1.0
             blindagem?.geometry?.material(named: "placa")?.diffuse.contents = UIColor.orange
             blindagem?.geometry?.material(named: "PlacaColuna")?.diffuse.contents = UIColor.red
-        }
-    }
-    
-    @IBAction func adicionarDiamond(_ sender: Any) {
-        if carro != nil {
-            ivDiamond.alpha = 1.0
+            case 2:
             ivSTD.alpha = 0.0
             ivRUBI.alpha = 0.0
-            carro?.opacity = 0.7
-            blindagem?.opacity = 1.0
+            ivDiamond.alpha = 1.0
             blindagem?.geometry?.material(named: "placa")?.diffuse.contents = UIColor.red
             blindagem?.geometry?.material(named: "PlacaColuna")?.diffuse.contents = UIColor.black
+            default:
+                carro?.opacity = 1.0
+                blindagem?.opacity = 0.0
+                ivInformacao.alpha = 0.0
+                ivSTD.alpha = 0.0
+                ivRUBI.alpha = 0.0
+                ivDiamond.alpha = 0.0
+                
+            }
+        }
+    
+    @IBAction func adicionarBlindagem(_ sender: UIButton) {
+        if carro != nil {
+            modificarBlindagem(identificador: sender.tag)
         }
     }
 //    fim dos botoes da blindagem
@@ -276,25 +225,49 @@ class ViewController: UIViewController  {
         
         tapReconizer?.isEnabled = false
         
-        let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
-        sceneView.addGestureRecognizer(swipeRecognizer)
-        swipeRecognizer.delegate = self
+        let rotationRecognizer = UIRotationGestureRecognizer(target: self, action: #selector(handleRotation(_:)))
+        sceneView.addGestureRecognizer(rotationRecognizer)
+        rotationRecognizer.delegate = self
         
-        let pinchRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handlePinch(_:)))
+        let pinchRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(_:)))
         sceneView.addGestureRecognizer(pinchRecognizer)
         pinchRecognizer.delegate = self
         
     }
     
+    // manipulador do gesto de rotação
     @objc
-       func handleSwipe(_ gestureRecognize: UIGestureRecognizer) {
+    func handleRotation(_ gestureRecognize: UIRotationGestureRecognizer) {
+        
+        let rotation = Float(gestureRecognize.rotation)
+        
+        if gestureRecognize.state == .changed{
+            
+            carro?.eulerAngles.y = currentAngleY + rotation
+            blindagem?.eulerAngles.y = currentAngleY + rotation
+        }
+        
+        if(gestureRecognize.state == .ended){
+            
+            currentAngleY = (carro?.eulerAngles.y)!
+        }
         
     }
     
+    //manipulador do gesto de crescimento
     @objc
-       func handlePinch(_ gestureRecognize: UIGestureRecognizer) {
+       func handlePinch(_ gestureRecognize: UIPinchGestureRecognizer) {
         
-        
+        if gestureRecognize.state == .changed{
+            
+            let pinchScaleX: CGFloat = gestureRecognize.scale * CGFloat((carro?.scale.x)!)
+            let pinchScaleY: CGFloat = gestureRecognize.scale * CGFloat((carro?.scale.y)!)
+            let pinchScaleZ: CGFloat = gestureRecognize.scale * CGFloat((carro?.scale.z)!)
+            carro?.scale = SCNVector3Make(Float(pinchScaleX), Float(pinchScaleY), Float(pinchScaleZ))
+            blindagem?.scale = SCNVector3Make(Float(pinchScaleX) - 0.00001, Float(pinchScaleY) - 0.00001, Float(pinchScaleZ) - 0.00001)
+            gestureRecognize.scale = 1
+        }
+        if gestureRecognize.state == .ended{ }
         
     }
     
