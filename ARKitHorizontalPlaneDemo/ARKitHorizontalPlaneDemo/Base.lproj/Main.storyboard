@@ -152,7 +152,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ativo 8" translatesAutoresizingMaskIntoConstraints="NO" id="7lV-Pe-F38">
-                                <rect key="frame" x="372" y="70" width="30" height="30"/>
+                                <rect key="frame" x="374" y="50" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="kSN-wX-Ucz"/>
                                     <constraint firstAttribute="width" constant="30" id="mGM-DP-ER3"/>
@@ -185,7 +185,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sfm-ib-45A" secondAttribute="trailing" constant="119" id="3rg-ZW-Yex"/>
                             <constraint firstItem="IxB-cc-AFm" firstAttribute="top" secondItem="FUl-dH-iJ3" secondAttribute="bottom" constant="20" id="5Qa-gx-aeF"/>
                             <constraint firstItem="fdn-2G-CC2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9Ao-fO-mVy"/>
-                            <constraint firstItem="7lV-Pe-F38" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="372" id="9gz-he-KH8"/>
+                            <constraint firstItem="7lV-Pe-F38" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="374" id="9gz-he-KH8"/>
                             <constraint firstItem="FBV-z7-uyL" firstAttribute="centerX" secondItem="VNh-b0-PxT" secondAttribute="centerX" id="B1Y-7v-4aK"/>
                             <constraint firstItem="jI8-gS-dO0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="E3G-wp-SQF"/>
                             <constraint firstItem="SXe-md-sdl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-100" id="Jw4-l2-S8h"/>
@@ -209,7 +209,7 @@
                             <constraint firstItem="FUl-dH-iJ3" firstAttribute="top" secondItem="Wki-Fe-1V8" secondAttribute="bottom" constant="47" id="sNf-pe-d5W"/>
                             <constraint firstItem="Tlc-hP-0KG" firstAttribute="centerX" secondItem="VNh-b0-PxT" secondAttribute="centerX" id="trT-rd-I6n"/>
                             <constraint firstItem="jI8-gS-dO0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wZL-uq-saG"/>
-                            <constraint firstItem="7lV-Pe-F38" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="wh5-BP-AZd"/>
+                            <constraint firstItem="7lV-Pe-F38" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="wh5-BP-AZd"/>
                             <constraint firstItem="FUl-dH-iJ3" firstAttribute="top" secondItem="ifC-FY-EzG" secondAttribute="bottom" constant="20" id="zcL-ec-7te"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

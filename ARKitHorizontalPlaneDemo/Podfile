@@ -1,0 +1,13 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '12.0'
+
+target 'ARKitHorizontalPlaneDemo' do
+  # Comment the next line if you don't want to use dynamic frameworks
+	pod 'Alamofire', '~> 4.7'
+	pod 'SwiftyJSON', '~> 5.0.0'
+	pod 'ProgressHUD', '~> 2.60'
+  use_frameworks!
+
+  # Pods for ARKitHorizontalPlaneDemo
+
+end

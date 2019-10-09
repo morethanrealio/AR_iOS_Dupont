@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.9.0)
+  - ProgressHUD (2.60)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - ProgressHUD (~> 2.60)
+  - SwiftyJSON (~> 5.0.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - ProgressHUD
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  ProgressHUD: 4e4efbaf4f5de8bd32e0c4c3b6644a90ea1a8c3e
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: 44b2312b21a5440a9cd6b01c394a84bc8ba26233
+
+COCOAPODS: 1.8.1

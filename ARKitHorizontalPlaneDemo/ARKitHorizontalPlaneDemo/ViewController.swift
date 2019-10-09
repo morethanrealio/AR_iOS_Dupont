@@ -8,15 +8,16 @@
 
 import UIKit
 import SceneKit
-import SpriteKit
 import ARKit
 
 class ViewController: UIViewController  {
     
     @IBOutlet weak var sceneView: ARSCNView!
-//    @IBOutlet weak var spriteView: ARSKView!
     var carro:SCNNode?
     var blindagem:SCNNode?
+    var blindagem_porta:SCNNode?
+    var blindagem_coluna:SCNNode?
+    var blindagem_macaneta:SCNNode?
     var tapReconizer: UITapGestureRecognizer?
     var currentAngleY: Float = -90.0
     let tempo = 2.0
@@ -26,7 +27,6 @@ class ViewController: UIViewController  {
     @IBOutlet weak var ivInformacao: UIImageView!
     @IBOutlet weak var ivKevXp: UIImageView!
     
-    //var sombra:SCNNode?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +60,6 @@ class ViewController: UIViewController  {
     }
     
     // botoes de resize
-    // primeiro botao
     @IBAction func Aumentar(_ sender: UIButton) {
         
         switch sender.tag {
@@ -87,6 +86,13 @@ class ViewController: UIViewController  {
             ivInformacao.alpha = 1.0
             carro?.opacity = 0.75
             blindagem?.opacity = 1.0
+            
+            if ivKevXp.alpha != 1.0{
+                
+                blindagem_macaneta?.opacity = 0.0
+                blindagem_porta?.opacity = 0.0
+                blindagem_coluna?.opacity = 0.0
+            }
             
             switch identificador {
             case 0:
@@ -125,24 +131,36 @@ class ViewController: UIViewController  {
     }
 //    fim dos botoes da blindagem
     
+    
     // Exeperiencia Kevlar
     
     @IBAction func habilitarTiro(_ sender: Any) {
         
+        if carro != nil{
         if ivKevXp.alpha == 0.0 {
             ivKevXp.alpha = 1.0
+            blindagem_macaneta?.opacity = 1.0
+            blindagem_porta?.opacity = 1.0
+            blindagem_coluna?.opacity = 1.0
         }
         else{
             ivKevXp.alpha = 0.0
+            blindagem_macaneta?.opacity = 0.0
+            blindagem_porta?.opacity = 0.0
+            blindagem_coluna?.opacity = 0.0
         }
+        
         // adiciona um tap Recognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         sceneView.addGestureRecognizer(tapGesture)
         tapGesture.delegate = self
+            
+        }
         
         
     }
     
+    // Reconhece o tap para gerar a Interface de cada blindagem
     @objc
     func handleTap(_ gestureRecognize: UIGestureRecognizer) {
          
@@ -151,21 +169,34 @@ class ViewController: UIViewController  {
         let p = gestureRecognize.location(in: sceneView)
         
         let hitResults = sceneView.hitTest(p, options: [:])
+        
         // check that we clicked on at least one object
         if hitResults.count > 0 {
             
             // retrieved the first clicked object
             let result = hitResults[0]
             
-            let posicao = result.localCoordinates
-            //let matriz = simd_float4x4(posicao)
-            let plano = SCNNode.init(geometry: SCNPlane(width: 0.2, height: 0.2))
-            plano.position = posicao
-            plano.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "logo.png")
-            plano.geometry?.firstMaterial?.isDoubleSided = true
-            result.node.addChildNode(plano)
+            // Gera a Interface apropiada para cada local de blindagem
+            if result.node.name == "porta" {
+                print("acertou: \(result.node.name)")
+            }
             
-            print("acertou: \(result.node.name)")
+            if result.node.name == "macaneta" {
+                print("acertou: \(result.node.name)")
+            }
+            
+            if result.node.name == "coluna" {
+                print("acertou: \(result.node.name)")
+            }
+            
+//            let posicao = result.localCoordinates
+//            //let matriz = simd_float4x4(posicao)
+//            let plano = SCNNode.init(geometry: SCNPlane(width: 0.2, height: 0.2))
+//            plano.position = posicao
+//            plano.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "logo.png")
+//            plano.geometry?.firstMaterial?.isDoubleSided = true
+//            result.node.addChildNode(plano)
+            
         }
     }
     
@@ -196,10 +227,24 @@ class ViewController: UIViewController  {
         carNode.position = SCNVector3(x + 2.0,y,z)
         sceneView.scene.rootNode.addChildNode(carNode)
         
-        let rodaD_ENode = carNode.childNode(withName: "rodaD_E", recursively: false)
-        let rodaD_DNode = carNode.childNode(withName: "rodaD_D", recursively: false)
-        let rodaT_ENode = carNode.childNode(withName: "rodaT_E", recursively: false)
+        guard let rodaD_ENode = carNode.childNode(withName: "rodaD_E", recursively: false),
+        let rodaD_DNode = carNode.childNode(withName: "rodaD_D", recursively: false),
+        let rodaT_ENode = carNode.childNode(withName: "rodaT_E", recursively: false),
         let rodaT_DNode = carNode.childNode(withName: "rodaT_D", recursively: false)
+        else{
+            return
+        }
+        
+        guard let blindagem_macanetaNode = blindagemNode.childNode(withName: "macaneta", recursively: false),
+        let blindagem_portaNode = blindagemNode.childNode(withName: "porta", recursively: false),
+        let blindagem_colunaNode = blindagemNode.childNode(withName: "coluna", recursively: false)
+        else{
+            return
+        }
+        
+        blindagem_macaneta = blindagem_macanetaNode
+        blindagem_porta = blindagem_portaNode
+        blindagem_coluna = blindagem_colunaNode
         
         carro = carNode
         SCNTransaction.begin()
@@ -212,16 +257,16 @@ class ViewController: UIViewController  {
         animation.duration = 1.0
         animation.autoreverses = false
         animation.repeatDuration = tempo
-        rodaT_ENode?.addAnimation(animation, forKey: "roda")
-        rodaD_ENode?.addAnimation(animation, forKey: "roda")
+        rodaT_ENode.addAnimation(animation, forKey: "roda")
+        rodaD_ENode.addAnimation(animation, forKey: "roda")
     
         let animation2 = CABasicAnimation(keyPath: "transform.eulerAngles.x")
         animation2.toValue = NSNumber(value: -Double.pi*2.0)
         animation2.duration = 1.0
         animation2.autoreverses = false
         animation2.repeatDuration = tempo
-        rodaD_DNode?.addAnimation(animation2, forKey: "roda2")
-        rodaT_DNode?.addAnimation(animation2, forKey: "roda2")
+        rodaD_DNode.addAnimation(animation2, forKey: "roda2")
+        rodaT_DNode.addAnimation(animation2, forKey: "roda2")
         
         tapReconizer?.isEnabled = false
         
@@ -239,7 +284,7 @@ class ViewController: UIViewController  {
     @objc
     func handleRotation(_ gestureRecognize: UIRotationGestureRecognizer) {
         
-        let rotation = Float(gestureRecognize.rotation)
+        let rotation = -Float(gestureRecognize.rotation)
         
         if gestureRecognize.state == .changed{
             
@@ -280,6 +325,7 @@ class ViewController: UIViewController  {
           tapReconizer = tapGestureRecognizer
     }
     
+    // seta a cena
     func setUpSceneView() {
         let configuration = ARWorldTrackingConfiguration()
         // setando o plano horizontal

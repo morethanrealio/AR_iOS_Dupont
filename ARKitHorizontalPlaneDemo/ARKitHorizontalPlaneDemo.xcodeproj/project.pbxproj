@@ -12,6 +12,7 @@
 		638A9CF31FBA0605001D52ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638A9CF11FBA0605001D52ED /* Main.storyboard */; };
 		638A9CF51FBA0605001D52ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638A9CF41FBA0605001D52ED /* Assets.xcassets */; };
 		638A9CF81FBA0605001D52ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638A9CF61FBA0605001D52ED /* LaunchScreen.storyboard */; };
+		AD9572A6A752ABE41FE139F2 /* Pods_ARKitHorizontalPlaneDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DF2CE2A04F6BDE8E4B8D7E /* Pods_ARKitHorizontalPlaneDemo.framework */; };
 		EFB53B4A233559C5007C8F17 /* amg logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFB53B49233559C5007C8F17 /* amg logo.jpg */; };
 		EFB53B4C23355A98007C8F17 /* dash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFB53B4B23355A98007C8F17 /* dash.jpg */; };
 		EFB53B4E23355AAA007C8F17 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFB53B4D23355AAA007C8F17 /* logo.jpg */; };
@@ -24,10 +25,13 @@
 		EFB53B5D23355AE6007C8F17 /* Brakes_01_NM.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFB53B5623355AE6007C8F17 /* Brakes_01_NM.jpg */; };
 		EFB53B5E23355AE6007C8F17 /* Brakes_02_NM.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFB53B5723355AE6007C8F17 /* Brakes_02_NM.jpg */; };
 		EFB53B6023355B46007C8F17 /* sombra.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB53B5F23355B46007C8F17 /* sombra.png */; };
+		EFB53B62233BFFE1007C8F17 /* circulo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFB53B61233BFFE1007C8F17 /* circulo.jpg */; };
 		EFD4D5BA2333BED000F06B7B /* Mercedes_002.scn in Resources */ = {isa = PBXBuildFile; fileRef = EFD4D5B92333BED000F06B7B /* Mercedes_002.scn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37A332CF54593C58231BD252 /* Pods-ARKitHorizontalPlaneDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitHorizontalPlaneDemo.debug.xcconfig"; path = "Target Support Files/Pods-ARKitHorizontalPlaneDemo/Pods-ARKitHorizontalPlaneDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		44DF2CE2A04F6BDE8E4B8D7E /* Pods_ARKitHorizontalPlaneDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARKitHorizontalPlaneDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		638A9CEA1FBA0605001D52ED /* ARKitHorizontalPlaneDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitHorizontalPlaneDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		638A9CED1FBA0605001D52ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		638A9CEF1FBA0605001D52ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +39,7 @@
 		638A9CF41FBA0605001D52ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		638A9CF71FBA0605001D52ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		638A9CF91FBA0605001D52ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9BB52781A9828DAD52F62F5 /* Pods-ARKitHorizontalPlaneDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitHorizontalPlaneDemo.release.xcconfig"; path = "Target Support Files/Pods-ARKitHorizontalPlaneDemo/Pods-ARKitHorizontalPlaneDemo.release.xcconfig"; sourceTree = "<group>"; };
 		EFB53B49233559C5007C8F17 /* amg logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "amg logo.jpg"; path = "../../../3D/amg logo.jpg"; sourceTree = "<group>"; };
 		EFB53B4B23355A98007C8F17 /* dash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = dash.jpg; path = ../../../3D/dash.jpg; sourceTree = "<group>"; };
 		EFB53B4D23355AAA007C8F17 /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logo.jpg; path = ../../../3D/logo.jpg; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 		EFB53B5623355AE6007C8F17 /* Brakes_01_NM.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Brakes_01_NM.jpg; path = ../../../3D/Brakes_01_NM.jpg; sourceTree = "<group>"; };
 		EFB53B5723355AE6007C8F17 /* Brakes_02_NM.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Brakes_02_NM.jpg; path = ../../../3D/Brakes_02_NM.jpg; sourceTree = "<group>"; };
 		EFB53B5F23355B46007C8F17 /* sombra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sombra.png; sourceTree = "<group>"; };
+		EFB53B61233BFFE1007C8F17 /* circulo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = circulo.jpg; sourceTree = "<group>"; };
 		EFD4D5B92333BED000F06B7B /* Mercedes_002.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Mercedes_002.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,17 +61,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD9572A6A752ABE41FE139F2 /* Pods_ARKitHorizontalPlaneDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1782638896C700145465F349 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				37A332CF54593C58231BD252 /* Pods-ARKitHorizontalPlaneDemo.debug.xcconfig */,
+				D9BB52781A9828DAD52F62F5 /* Pods-ARKitHorizontalPlaneDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		638A9CE11FBA0604001D52ED = {
 			isa = PBXGroup;
 			children = (
 				638A9CEC1FBA0605001D52ED /* ARKitHorizontalPlaneDemo */,
 				638A9CEB1FBA0605001D52ED /* Products */,
+				1782638896C700145465F349 /* Pods */,
+				A63CC916329EAC69F6C64DEC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +120,7 @@
 				EFB53B5623355AE6007C8F17 /* Brakes_01_NM.jpg */,
 				EFB53B5223355AE6007C8F17 /* Brakes_02_DM.jpg */,
 				EFB53B5723355AE6007C8F17 /* Brakes_02_NM.jpg */,
+				EFB53B61233BFFE1007C8F17 /* circulo.jpg */,
 				EFB53B5123355AE6007C8F17 /* plate.jpg */,
 				EFB53B5F23355B46007C8F17 /* sombra.png */,
 				EFB53B5323355AE6007C8F17 /* Tire_04_DM.jpg */,
@@ -111,6 +131,14 @@
 			path = "3D Objects";
 			sourceTree = "<group>";
 		};
+		A63CC916329EAC69F6C64DEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44DF2CE2A04F6BDE8E4B8D7E /* Pods_ARKitHorizontalPlaneDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 638A9CFC1FBA0605001D52ED /* Build configuration list for PBXNativeTarget "ARKitHorizontalPlaneDemo" */;
 			buildPhases = (
+				F9FD7299C4EA29110597F782 /* [CP] Check Pods Manifest.lock */,
 				638A9CE61FBA0605001D52ED /* Sources */,
 				638A9CE71FBA0605001D52ED /* Frameworks */,
 				638A9CE81FBA0605001D52ED /* Resources */,
+				1296F4D8786D620652D7621A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,6 +204,7 @@
 				EFB53B5D23355AE6007C8F17 /* Brakes_01_NM.jpg in Resources */,
 				EFB53B5023355AB3007C8F17 /* tex_carbon.jpg in Resources */,
 				638A9CF81FBA0605001D52ED /* LaunchScreen.storyboard in Resources */,
+				EFB53B62233BFFE1007C8F17 /* circulo.jpg in Resources */,
 				EFD4D5BA2333BED000F06B7B /* Mercedes_002.scn in Resources */,
 				EFB53B6023355B46007C8F17 /* sombra.png in Resources */,
 				638A9CF51FBA0605001D52ED /* Assets.xcassets in Resources */,
@@ -190,6 +221,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1296F4D8786D620652D7621A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ARKitHorizontalPlaneDemo/Pods-ARKitHorizontalPlaneDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ARKitHorizontalPlaneDemo/Pods-ARKitHorizontalPlaneDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9FD7299C4EA29110597F782 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARKitHorizontalPlaneDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		638A9CE61FBA0605001D52ED /* Sources */ = {
@@ -334,6 +412,7 @@
 		};
 		638A9CFD1FBA0605001D52ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37A332CF54593C58231BD252 /* Pods-ARKitHorizontalPlaneDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -350,6 +429,7 @@
 		};
 		638A9CFE1FBA0605001D52ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9BB52781A9828DAD52F62F5 /* Pods-ARKitHorizontalPlaneDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
